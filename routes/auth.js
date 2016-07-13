@@ -3,6 +3,14 @@ var router = express.Router();
 var bcrypt = require('bcrypt')
 
 
+router.get('/', function(req, res, next) {
+    if (req.signedCookies.user){
+      res.render("auth/yougood");
+    } else {
+      res.render("auth/signin", {button_text: "sign in"});
+    }
+});
+
 router.get('/signin', function(req, res, next) {
     if (req.signedCookies.user){
       res.render("auth/yougood");
