@@ -29,7 +29,6 @@ app.use(cookieParser("asdfjasasdfads"));
 
 app.use('/', auth);
 app.use('/users', users);
-app.use('/tickets', user_bouncer);
 app.use('/tickets', tickets);
 app.use('/employees', employees);
 
